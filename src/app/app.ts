@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { DadosSolicitacao } from './pages/dados-solicitacao';
 
@@ -9,5 +9,4 @@ import { DadosSolicitacao } from './pages/dados-solicitacao';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('projeto-manutencao');
 }
