@@ -1,0 +1,19 @@
+*{
+    background-color: #101113;
+    color:white;
+    text-align: center;
+}
+
+.orcament{
+   background-color: #fa5f12;
+}
+
+
+
+.button{
+    padding-left: 20cm;
+    border: 2px;
+    border-color: #ff8345;
+    color:#fa5f12;
+}
+
