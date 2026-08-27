@@ -1,42 +1,58 @@
-<div class="container mt-4">
-  <div class="d-flex justify-content-between align-items-center mb-4">
-    <h2>Minhas solicitações</h2>
-    <button class="btn btn-primary">Nova solicitação</button>
-  </div>
+<div class="dashboard">
 
-  <div class="card">
-    <div class="card-body">
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th>Data/Hora</th>
-            <th>Equipamento</th>
-            <th>Estado</th>
-            <th>Ação</th>
-          </tr>
-        </thead>
+  <aside class="sidebar">
+    <h3 class="logo">Fix<span>Up</span></h3>
 
-        <tbody>
-          @for (solicitacao of solicitacoes; track solicitacao.data) {
+    <nav>
+      <a class="active">Início</a>
+      <a>Solicitações</a>
+      <a>Perfil</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+
+    <header class="topbar">
+      <span>Sistema de Manutenção</span>
+      <span class="user">Cliente</span>
+    </header>
+
+    <section class="content">
+      <div class="page-header">
+        <div>
+          <p>Bem-vindo!</p>
+          <h1>Minhas solicitações</h1>
+        </div>
+
+        <button class="new-button">+ Nova solicitação</button>
+      </div>
+
+      <div class="card">
+        <h2>Solicitações recentes</h2>
+
+        <table class="table">
+          <thead>
             <tr>
-              <td>{{ solicitacao.data }}</td>
-              <td>{{ solicitacao.equipamento }}</td>
-              <td>{{ solicitacao.estado }}</td>
-              <td>
-                @if (solicitacao.estado === 'ORÇADA') {
-                  <button class="btn btn-success btn-sm">Aprovar/Rejeitar</button>
-                } @else if (solicitacao.estado === 'REJEITADA') {
-                  <button class="btn btn-warning btn-sm">Resgatar Serviço</button>
-                } @else if (solicitacao.estado === 'ARRUMADA') {
-                  <button class="btn btn-primary btn-sm">Pagar Serviço</button>
-                } @else {
-                  <button class="btn btn-secondary btn-sm">Visualizar</button>
-                }
-              </td>
+              <th>Data/Hora</th>
+              <th>Equipamento</th>
+              <th>Estado</th>
+              <th>Ação</th>
             </tr>
-          }
-        </tbody>
-      </table>
-    </div>
-  </div>
+          </thead>
+
+          <tbody>
+            @for (solicitacao of solicitacoes; track solicitacao.data) {
+              <tr>
+                <td>{{ solicitacao.data }}</td>
+                <td>{{ solicitacao.equipamento }}</td>
+                <td><span class="status">{{ solicitacao.estado }}</span></td>
+                <td><button class="action-button">Visualizar</button></td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
 </div>
