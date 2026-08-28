@@ -4,11 +4,20 @@
     text-align: center;
 }
 
-.orcament{
-    font-size:20px ;
-   background-color: #fa5f12;
-   display: inline-block;
+.pagamento{
+    font-size: 20px;
+    background-color: #fa5f12;
+    display: inline-block;
    
+}
+
+
+
+.button{
+    padding-left: 20cm;
+    border: 2px;
+    border-color: #ff8345;
+    color:#fa5f12;
 }
 
 .h1{
@@ -18,11 +27,3 @@
 .meio{
     font-size: 20px;
 }
-
-.button{
-    padding-left: 20cm;
-    border: 2px;
-    border-color: #ff8345;
-    color:#fa5f12;
-}
-
