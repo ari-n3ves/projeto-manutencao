@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relatório</title>
+  <link rel="stylesheet" href="relatorio.css" />
+</head>
+
+<body>
+
+  <header>
+    <h1>Painel do Funcionário</h1>
+    <div class="header-right">
+      <span>RELATÓRIO</span>
+      <strong>RECEITAS</strong>
+    </div>
+  </header>
+
+  <div class="wrap">    <div class="eyebrow">Gerar Relatório</div>
+    <h2 class="title">Relatório de Receitas</h2>
+
+    <div class="tabs">
+      <label><input type="radio" name="tipo" checked> <span class="active-label">Por período (RF019)</span></label>
+      <label><input type="radio" name="tipo"> Por categoria (RF020)</label>
+    </div>
+
+    <div class="section-title">Filtro de Período</div>
+    <div class="row">
+      <div class="field">
+        <label>Data Inicial</label>
+        <input type="text" placeholder="dd/mm/aaaa">
+      </div>
+      <div class="field">
+        <label>Data Final</label>
+        <input type="text" placeholder="dd/mm/aaaa">
+      </div>
+    </div>
+    <div class="hint">Deixe em branco para considerar todo o período disponível.</div>
+
+    <!-- bloco do filtro por categoria, escondido por padrão — ainda cru -->
+    <div class="category-filter">
+      <select>
+        <option>Todas as categorias</option>
+        <option>Notebook</option>
+        <option>Desktop</option>
+        <option>Impressora</option>
+        <option>Mouse</option>
+        <option>Teclado</option>
+      </select>
+    </div>
+
+    <div class="preview-box">
+      <div class="label">Receita total no período</div>
+      <div class="value">R$ 0,00 <small>agrupado por dia</small></div>
+    </div>
+
+    <button class="btn-plain">exportar CSV (rascunho)</button>
+
+    <div class="actions">
+      <button class="btn-cancel">Cancelar</button>
+      <button class="btn-primary">Gerar PDF</button>
+    </div>
+  </div>
+
+  <footer class="dev-note">
+    wip — falta: máscara de data, estado vazio do preview, estilizar select de categoria e o toggle das abas
+  </footer>
+
+</body>
+</html>
