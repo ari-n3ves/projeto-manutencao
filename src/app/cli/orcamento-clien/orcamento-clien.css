@@ -1,0 +1,28 @@
+*{
+    background-color: #101113;
+    color:white;
+    text-align: center;
+}
+
+.orcament{
+    font-size:20px ;
+   background-color: #fa5f12;
+   display: inline-block;
+   
+}
+
+.h1{
+    font-size: 30px;
+}
+
+.meio{
+    font-size: 20px;
+}
+
+.button{
+    padding-left: 20cm;
+    border: 2px;
+    border-color: #ff8345;
+    color:#fa5f12;
+}
+

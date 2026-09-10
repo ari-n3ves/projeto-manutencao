@@ -1,0 +1,54 @@
+:host{
+  min-height: 100vh;
+  display: block;
+  background: #101113;
+  color: #f5f5f5;
+  padding: 30px 0;
+}
+
+.container-solicitacao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.titulo-secao{
+    text-align: left;
+    font-size: 25px;
+}
+
+.dados-solicitacao{
+    padding: 10px;
+    margin: 20px;
+    border: 2px solid #f5f5f5;
+    border-radius: 30px;
+}
+
+.item{
+    padding-left: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.data-hora{
+    justify-content: left;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#status-solicitacao{
+    font-size: 15;
+    display: inline-block;
+    padding: 3px;
+    border: 1px solid rgb(53, 53, 53);
+    background: rgba(53, 53, 53, 0.3);
+}
+
+.andamento-servico{
+    padding: 10px;
+    margin: 20px;
+    border: 2px solid #f5f5f5;
+    border-radius: 30px;
+}

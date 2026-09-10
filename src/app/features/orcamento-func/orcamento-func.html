@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Efetuar Orçamento - OS</title>
+  <link rel="stylesheet" href="orcamento-func.css" />
+</head>
+<body>
+  <div class="background-lines" aria-hidden="true"></div>
+
+  <main class="tela">
+    <div class="topo-marca">
+      <div class="marca">
+        <span>Painel do Funcionário</span>
+      </div>
+      <div class="os-tag">
+        <span class="os-tag__rotulo">Ordem de Serviço</span>
+        <span class="os-tag__numero" id="numero-solicitacao" data-field="solicitacaoId">OS-0000</span>
+      </div>
+    </div>
+
+    <section class="cartao" id="folha-orcamento" data-solicitacao-id="">
+
+      <div class="cartao__cabecalho">
+        <div>
+          <div class="eyebrow">EFETUAR ORÇAMENTO</div>
+          <h1>Solicitação</h1>
+        </div>
+
+        <span class="status" id="carimbo-status" data-status="ABERTA" role="status" aria-live="polite">
+            <!-- Quando registrar, o estado passa de aberta para orçada-->
+          <span id="texto-status">Aberta</span>
+        </span>
+      </div>
+
+      <div class="secao">
+        <div class="secao__titulo">Dados do Cliente</div>
+
+        <div class="grade-campos">
+          <label class="dado dado--largo">
+            <span class="dado__rotulo">Nome completo</span>
+            <span class="dado__valor" id="cliente-nome" data-field="clienteNome">-</span>
+          </label>
+
+          <label class="dado">
+            <span class="dado__rotulo">CPF / CNPJ</span>
+            <span class="dado__valor" id="cliente-documento" data-field="clienteDocumento">-</span>
+          </label>
+
+          <label class="dado">
+            <span class="dado__rotulo">Telefone</span>
+            <span class="dado__valor" id="cliente-telefone" data-field="clienteTelefone">-</span>
+          </label>
+
+          <label class="dado">
+            <span class="dado__rotulo">E-mail</span>
+            <span class="dado__valor" id="cliente-email" data-field="clienteEmail">-</span>
+          </label>
+
+          <label class="dado dado--largo">
+            <span class="dado__rotulo">Endereço</span>
+            <span class="dado__valor" id="cliente-endereco" data-field="clienteEndereco">-</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="secao">
+        <div class="secao__titulo">Dados da Solicitação</div>
+
+        <div class="grade-campos">
+          <label class="dado">
+            <span class="dado__rotulo">Categoria do equipamento</span>
+            <span class="dado__valor" id="equipamento-categoria" data-field="equipamentoCategoria">-</span>
+          </label>
+
+          <label class="dado">
+            <span class="dado__rotulo">Aberta em</span>
+            <span class="dado__valor" id="solicitacao-data-abertura" data-field="dataAbertura">-</span>
+          </label>
+
+          <label class="dado dado--largo">
+            <span class="dado__rotulo">Descrição do equipamento</span>
+            <span class="dado__valor" id="equipamento-descricao" data-field="equipamentoDescricao">-</span>
+          </label>
+
+          <label class="dado dado--largo">
+            <span class="dado__rotulo">Descrição do defeito</span>
+            <p class="dado__valor dado__valor--texto" id="defeito-descricao" data-field="defeitoDescricao">-</p>
+          </label>
+        </div>
+      </div>
+
+      <div class="secao">
+        <div class="secao__titulo">Orçamento</div>
+
+        <form id="form-orcamento" class="caixa-orcamento" novalidate>
+
+          <input type="hidden" id="funcionario-id" name="funcionarioId" data-field="funcionarioId" value="" />
+
+          <div class="grade-campos grade-campos--form">
+            <label class="dado">
+              <span class="dado__rotulo">Responsável pelo orçamento</span>
+              <span class="dado__valor" id="funcionario-nome" data-field="funcionarioNome">-</span>
+            </label>
+
+            <label class="dado">
+              <span class="dado__rotulo">Data / hora do orçamento</span>
+              <span class="dado__valor" id="orcamento-data-hora" data-field="orcamentoDataHora">
+                será registrada ao confirmar
+              </span>
+            </label>
+          </div>
+
+          <div class="destaque-valor">
+            <label for="input-valor-orcamento" class="destaque-valor__rotulo">Valor do orçamento</label>
+            <div class="destaque-valor__campo">
+              <span class="destaque-valor__prefixo" aria-hidden="true">R$</span>
+              <input
+                type="number"
+                id="input-valor-orcamento"
+                name="valorOrcamento"
+                class="destaque-valor__input"
+                data-field="valorOrcamento"
+                inputmode="decimal"
+                step="0.01"
+                min="0"
+                placeholder="0,00"
+                required
+                aria-describedby="valor-orcamento-erro"
+              />
+            </div>
+            <p class="destaque-valor__erro" id="valor-orcamento-erro" role="alert" hidden>
+              Informe um valor de orçamento válido.
+            </p>
+          </div>
+
+          <label class="campo-texto">
+            <span class="campo-texto__rotulo">
+              Observações do orçamento <em>(opcional)</em>
+            </span>
+            <textarea
+              id="input-observacoes"
+              name="observacoes"
+              data-field="observacoes"
+              rows="3"
+              placeholder="Peças a substituir, prazo estimado, condições de pagamento..."
+            ></textarea>
+          </label>
+
+          <div class="acoes">
+            <button type="button" id="botao-cancelar" class="botao-secundario">
+              Cancelar
+            </button>
+            <button type="submit" id="botao-registrar-orcamento" class="botao-primario">
+              Registrar orçamento
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- <script type="module" src="orcamento.ts"></script> -->
+</body>
+</html>
