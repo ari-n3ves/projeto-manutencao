@@ -38,13 +38,12 @@
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 1px;
-  margin-bottom: 8px;
 }
 
 h1 {
   color: #FFFFFF;
   font-size: 28px;
-  margin: 0;
+  margin: 8px 0;
 }
 
 .subtitle {
@@ -65,7 +64,7 @@ form > label {
 
 input[type="email"],
 input[type="password"] {
-  background: #1A1A1A;
+  background: #0D0D0D;
   color: #FFFFFF;
   border: 1px solid #2A2A2A;
   border-radius: 8px;
@@ -109,10 +108,12 @@ button {
   color: #FFFFFF;
   font-weight: 700;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 button:hover {
   background: #E8490A;
+  transform: translateY(-1px);
 }
 
 .register {

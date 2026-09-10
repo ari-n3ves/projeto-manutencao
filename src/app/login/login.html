@@ -11,7 +11,12 @@
 
     <form>
       <label for="email">E-mail</label>
-      <input id="email" type="email" placeholder="Digite seu e-mail">
+      <input
+        id="email"
+        type="email"
+        placeholder="Digite seu e-mail"
+        [(ngModel)]="email"
+      >
 
       <label for="password">Senha</label>
       <input id="password" type="password" placeholder="Digite sua senha">
@@ -24,7 +29,7 @@
         <a>Esqueci minha senha</a>
       </div>
 
-      <button type="submit">ENTRAR</button>
+      <button type="button" (click)="entrar()">ENTRAR</button>
     </form>
 
     <p class="register">
