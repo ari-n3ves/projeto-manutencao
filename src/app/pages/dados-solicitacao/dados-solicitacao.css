@@ -1,34 +1,40 @@
 :host{
-  min-height: 100vh;
-  display: block;
-  background: #101113;
-  color: #f5f5f5;
-  padding: 30px 0;
+    display: block;
+    min-height: 100vh;
+}
+
+.solicitacao-page{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0D0D0D;
+    color: #FFFFFF;
+    padding: 30px;
 }
 
 .container-solicitacao{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
+    width: 600px;
+    padding: 45px;
+    background: #1A1A1A;
+    border: 1px solid #2A2A2A;
+    border-radius: 16px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
 }
 
 .titulo-secao{
     text-align: left;
-    font-size: 25px;
-}
-
-.dados-solicitacao{
-    padding: 10px;
-    margin: 20px;
-    border: 2px solid #f5f5f5;
-    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
 .item{
+    color: #A0A0A0;
     padding-left: 5px;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 4px;
+    text-transform: uppercase; 
 }
 
 .data-hora{
@@ -38,17 +44,51 @@
     gap: 20px;
 }
 
-#status-solicitacao{
-    font-size: 15;
+#estado-solicitacao{
+    font-size: 14;
     display: inline-block;
     padding: 3px;
     border: 1px solid rgb(53, 53, 53);
     background: rgba(53, 53, 53, 0.3);
 }
 
-.andamento-servico{
-    padding: 10px;
-    margin: 20px;
-    border: 2px solid #f5f5f5;
-    border-radius: 30px;
+.etapa{
+    margin-bottom: 20px;
+}
+
+.titulo-etapa{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.desc-etapa{
+    color: #A0A0A0;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.info-etapa{
+    color: #6B6B6B;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.manutencao-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    background: #FF5500;
+    color: #FFFFFF;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.manutencao-btn:hover {
+    background: #E8490A;
+    transform: translateY(-1px);
 }

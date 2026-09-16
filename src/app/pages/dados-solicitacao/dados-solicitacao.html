@@ -1,42 +1,74 @@
-<div class="container-solicitacao">
-    <h2>Solicitação de Manutenção</h2>
+<div class="solicitacao-page">
+    <div class="container-solicitacao">
+        <section class="dados-solicitacao">
+            <h2 class="titulo-secao">Dados da Solicitação</h2>
 
-    <section class="dados-solicitacao">
-        <h2 class="titulo-secao">Dados da Solicitação</h2>
+            <h3 class="item">Cliente</h3>
+            <p>David Gilmore</p>
 
-        <h3 class="item">Cliente</h3>
-        <p>David Gilmore</p>
+            <div class="row">
+                <div class="col">
+                    <h3 class="item">Solicitado em</h3>
+                    <div class="data-hora">
+                        <p>DD/MM/YY</p>
+                        <p>00:00</p>
+                    </div>
+                </div>
 
-        <h3 class="item">Solicitado em</h3>
-         <div class="data-hora">
-            <p>DD/MM/YY</p>
-            <p>00:00</p>
-        </div>
+                <div class="col">
+                    <h3 class="item">Estado</h3>
+                    <p id="estado-solicitacao">ABERTA</p>
+                </div>
+            </div>
 
-        <h3 class="item">Status</h3>
-        <p id="status-solicitacao">ABERTA</p>
+            <h3 class="item">Equipamento</h3>
+            <p>Notebook Dell</p>
+            
+            <h3 class="item">Categoria</h3>
+            <p>Notebook</p>
 
-        <h3 class="item">Equipamento</h3>
-        <p>Notebook Dell</p>
-        
-        <h3 class="item">Categoria</h3>
-        <p>Notebook</p>
+            <h3 class="item">Defeito</h3>
+            <p>Tela rachada</p>
+            
+        </section>
 
-        <h3 class="item">Defeito</h3>
-        <p>Tela rachada</p>
-        
-    </section>
+        <hr/>
 
-    <section class="andamento-servico">
-        <h3 class="titulo-secao">Andamento do Serviço</h3>
-        
-        <div class="etapa">
-            <h3 class="titulo-etapa">Orçamento</h3>
-            <p>descrição</p>
-            <p>Funcionário</p>
-            <p>DD/MM/YY 00:00</p>
-        </div>
+        <section class="andamento-servico">
+            <h3 class="titulo-secao">Andamento do Serviço</h3>
+            
+            <div class="row etapa">
+                <div class="col-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                    <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+                    </svg>
+                </div>
 
-    </section>
+                <div class="col-9">
+                    <h3 class="titulo-etapa">Orçamento</h3>
+                    <p class="desc-etapa">R$200,00</p>
+                    <p class="info-etapa">Morgana Mortician</p>
+                    <p class="info-etapa"> 01/09/2026 14:00</p>
+                </div>
+            </div>
 
+            <div class="row etapa">
+                <div class="col-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                    <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+                    </svg>
+                </div>
+
+                <div class="col-9">
+                    <h3 class="titulo-etapa">Manutenção</h3>
+                    <p class="desc-etapa">Pendente</p>
+                </div>
+            </div>
+
+            <button class="manutencao-btn w-100">Realizar manutenção</button>
+
+        </section>
+    </div>
 </div>

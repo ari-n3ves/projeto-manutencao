@@ -1,47 +1,100 @@
 :host{
-    min-height: 100vh;
     display: block;
-    background: #000000;
-    color: #ffffff;
+    min-height: 100vh;
+    background: #111;
+    color: #fff;
 }
 
-.filter-list{
-    background: linear-gradient(to bottom, #1a1a1a, #000000);
-    height: 10vh;
-    padding: 20px;
-    text-align: center;
-}
-
-#add-filter-btn{
-    font-size: 15;
-    display: inline-block;
-    padding: 3px;
-    background: #FF5500;
-}
-
-.list-solicitacoes{
-    padding: 100px;
+.dashboard {
     display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    background: #181818;
+    padding: 30px 20px;
+    border-right: 1px solid #292929;
+}
+
+.logo {
+    font-size: 25px;
+    margin-bottom: 45px;
+}
+
+.logo span {
+    color: #ff6900;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px;
+    margin-bottom: 8px;
+    color: #aaa;
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+.sidebar a:hover,
+.sidebar .active {
+    background: #ff6900;
+    color: #fff;
+}
+
+.main-content{
+    flex: 1;
+}
+
+.topbar{
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-    gap: 14px;
+    padding: 0 35px;
+    background: #181818;
+    border-bottom: 1px solid #292929;
 }
 
-.solicitacao-container{
-    background: #1a1a1a;
-    width: 100vh;
-    height: 10vh;
+.user {
+    color: #ff6900;
 }
 
-.solicitacao-container:hover{
-    border: 1px solid #FF5500;
-    box-shadow: 0 0 20px rgb(255, 85, 0, 0.5);
+.card {
+    background: #1b1b1b;
+    padding: 25px;
+    border: 1px solid #292929;
+    border-radius: 12px;
 }
 
-.status{
-    font-size: 15;
-    display: inline-block;
-    padding: 3px;
-    border: 1px solid rgb(53, 53, 53);
-    background: rgba(53, 53, 53, 0.3);
+.card h2 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.table th {
+    color: #ff6900;
+    text-align: left;
+    border-bottom: 1px solid #333;
+    padding: 14px;
+    background-color: transparent;
+}
+
+.table td {
+    padding: 15px 14px;
+    border-bottom: 1px solid #292929;
+    color: #ddd;
+}
+
+.table th,
+.table td {
+    background-color: transparent;
+}
+
+.status {
+    color: #ff6900;
 }

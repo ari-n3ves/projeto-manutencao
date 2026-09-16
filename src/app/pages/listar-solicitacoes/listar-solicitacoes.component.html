@@ -1,20 +1,49 @@
-<div class="tela-lista">
-    <form class="filter-list">
-        <input type="text" placeholder="Pesquisar"/> <br/> <br/>
-        <input type="button" value="Filtar +" id="add-filter-btn"/>
-    </form>
-    <section class="list-solicitacoes">
-        <div class="solicitacao-container">
-            <span>Cliente</span>
-            <span>Data</span>
-            <span class="status">STATUS</span>
-        </div>
+<div class="dashboard">
+    <aside class="sidebar">
+        <h3 class="logo">Fix<span>Up</span></h3>
 
-        <div class="solicitacao-container">
-            <span>Cliente</span>
-            <span>Data</span>
-            <span class="status">STATUS</span>
-        </div>
-    </section>
+        <nav>
+        <a>Início</a>
+        <a class="active">Solicitações</a>
+        <a>Perfil</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <span>Sistema de Manutenção</span>
+            <span class="user">Funcionário</span>
+        </header>
+
+      <div class="card">
+        <form class="row">
+            <input class="col" type="text" placeholder="Pesquisar">
+            <input class="col" type="button" value="Filtrar">
+        </form>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Data/Hora</th>
+              <th>Equipamento</th>
+              <th>Estado</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            @for (solicitacao of solicitacoes; track solicitacao.data) {
+              <tr>
+                <td>{{ solicitacao.data }}</td>
+                <td>{{ solicitacao.equipamento }}</td>
+                <td><span class="status">{{ solicitacao.estado }}</span></td>
+                <td><button class="action-button">Visualizar</button></td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+
+    </main>
 </div>
 
