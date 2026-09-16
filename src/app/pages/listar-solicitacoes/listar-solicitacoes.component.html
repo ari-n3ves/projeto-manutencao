@@ -1,48 +1,54 @@
 <div class="dashboard">
     <aside class="sidebar">
-        <h3 class="logo">Fix<span>Up</span></h3>
+      <h3 class="logo">Fix<span>Up</span></h3>
 
-        <nav>
-        <a>Início</a>
-        <a class="active">Solicitações</a>
-        <a>Perfil</a>
-        </nav>
+      <nav>
+      <a>Início</a>
+      <a class="active">Solicitações</a>
+      <a>Perfil</a>
+      </nav>
     </aside>
 
     <main class="main-content">
         <header class="topbar">
-            <span>Sistema de Manutenção</span>
-            <span class="user">Funcionário</span>
+          <span>Sistema de Manutenção</span>
+          <span class="user">Funcionário</span>
         </header>
 
-      <div class="card">
-        <form class="row">
-            <input class="col" type="text" placeholder="Pesquisar">
-            <input class="col" type="button" value="Filtrar">
-        </form>
+        <section class="content">
+          <div class="page-header">
+            <h1>Solicitações</h1>
+          </div>
 
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Data/Hora</th>
-              <th>Equipamento</th>
-              <th>Estado</th>
-              <th>Ação</th>
-            </tr>
-          </thead>
+          <div class="card">
+            <form class="row">
+                <input class="col-5" type="text" placeholder="Pesquisar">
+                <input class="col-auto filter-button" type="button" value="Filtrar">
+            </form>
 
-          <tbody>
-            @for (solicitacao of solicitacoes; track solicitacao.data) {
-              <tr>
-                <td>{{ solicitacao.data }}</td>
-                <td>{{ solicitacao.equipamento }}</td>
-                <td><span class="status">{{ solicitacao.estado }}</span></td>
-                <td><button class="action-button">Visualizar</button></td>
-              </tr>
-            }
-          </tbody>
-        </table>
-      </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Data/Hora</th>
+                  <th>Equipamento</th>
+                  <th>Estado</th>
+                  <th>Ação</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                @for (solicitacao of solicitacoes; track solicitacao.data) {
+                  <tr>
+                    <td>{{ solicitacao.data }}</td>
+                    <td>{{ solicitacao.equipamento }}</td>
+                    <td><span class="status">{{ solicitacao.estado }}</span></td>
+                    <td><button class="action-button">Visualizar</button></td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        </section>
 
     </main>
 </div>

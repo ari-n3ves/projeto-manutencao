@@ -59,6 +59,21 @@
     color: #ff6900;
 }
 
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  margin: 5px 0 0;
+}
+
+.content {
+  padding: 40px;
+}
+
 .card {
     background: #1b1b1b;
     padding: 25px;
@@ -97,4 +112,20 @@
 
 .status {
     color: #ff6900;
+}
+
+.action-button, .filter-button{
+    background: #ff6900;
+}
+
+.filter-button{
+    margin-left: 8px;
+}
+
+.action-button{
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 7px;
+    cursor: pointer;
 }
