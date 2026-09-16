@@ -1,34 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scaleial-scale1.0">
-        <title>Pagamento Cliente</title>
-        <link rel="stylesheet" href="pagar.component.css">
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento Cliente</title>
+    <link rel="stylesheet" href="pagar.component.css">
+</head>
 
 <body>
-    
-    <div class="descrição">
-    <h1><b>Pagar</b></h1>
+
+    <div class="container">
+
+        <h1 class="h1">Pagamento</h1>
+        <h3>Dados da solicitação</h3>
 
         <div class="meio">
-            <p>Data:DD/MM/YYYY e Hora: 00:00</p>
 
-            <p>Descrição Equipamento: </p>
-            <p>Categoria:</p>
-            <p>Defeito:</p>
+            <div class="fiend">
+                Descrição Equipamento
+                <p class="valor">-</p>
+            </div>
+
+            <div class="fiend">
+                Categoria
+                <p class="valor">-</p>
+            </div>
+
+            <div class="fiend">
+                Defeito
+                <p class="valor">-</p>
+            </div>
+
         </div>
+
+        <h2 >valor de</h2>
+
+        <div class="fiend">
+             <div class="pagamento"><h3>R$xxxxx </h3> </div>
+
+        </div>
+            
+        <div class="botao">
+
+            <div class="wrapper">
+                <a href="#demo-modal2">
+                    <button type="submit" class="rejeitar">cancelar</button>
+                </a>
+            </div>
+
+            <div class="wrapper">
+                <a href="#demo-modal">
+                    <button type="submit" class="aprovar">pagar</button>
+                </a>
+            </div>
+
+        </div>
+
+        <div id="demo-modal" class="modal">
+
+            <div class="conteudo">
+
+                <a href="#" class="modal_fechar">&times;</a>
+                    Pagamento feito no valor<br>
+                    <div class="pagamento"> <h2>R$ xxxxx </h2></div><br>
+               
+                <a [routerLink]="['cliente/inicio']" href="#" ><button class="aprovar">Pagar</button></a> 
+
+            </div>
+
+        </div>
+
+        <div id="demo-modal2" class="modal">
+
+            <div class="conteudo">
+
+                <a href="#" class="modal_fechar">&times;</a>
+
+                <h2>Pagamento cancelado</h2>
+
+                <div class="botao">
+
+                    <a href="#" class="modal_fechar">&times;</a> 
+                    <a [routerLink]="['cliente/inicio']" href="#" class="cancelar"><button type="submit " class="aprovar">Confirmar cancelamento</button></a> 
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="pagamento">
-        Orçamento: R$xxxxx<br>
-    </div>
-
-    <br><br><button>Confirmar Pagamento</button>
-
-    <!-- pagamento confirmado span-->
-
-   
 </body>
+
 </html>

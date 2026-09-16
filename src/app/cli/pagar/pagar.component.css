@@ -1,29 +1,154 @@
-*{
-    background-color: #101113;
-    color:white;
-    text-align: center;
+
+* {
+    box-sizing: border-box;
 }
 
-.pagamento{
+.pagamento {
     font-size: 20px;
-    background-color: #fa5f12;
+    color: #ff5500;
     display: inline-block;
-   
 }
 
-
-
-.button{
-    padding-left: 20cm;
-    border: 2px;
-    border-color: #ff8345;
-    color:#fa5f12;
-}
-
-.h1{
+.h1 {
+    color:#ff5500;
+    align-items: center;
     font-size: 30px;
+    display: inline-block;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #111;
+    font-family: Arial;
+}
+
+.container {
+    width: 100%;
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 38px 42px 34px;
+    border-radius: 16px;
+    background: #242526;
+    color: white;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.conteudo {
+    text-align: center;
+    width: 370px;
+    position: relative;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    color: white;
+}
+
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal_fechar {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    color: #aaa;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+
+
+.aprovar,
+.rejeitar {
+    width: 100px;
+    height: 43px;
+    border: 2px solid #ff5500;
+    border-radius: 8px;
+    background: #ff5500;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 26px;
+    cursor: pointer;
+}
+
+.aprovar:hover,
+.rejeitar:hover {
+    background: #e64d00;
+}
+
+.cancelar {
+    border-radius: 8px;
+    background: transparent;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 20px;
+    height: 43px;
+    cursor: pointer;
+    border: 1px solid #555;
+}
+
+.cancelar:hover {
+    background: #292929;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 22px;
+}
+
+
+.valor {
+    font-size: 14px;
+    color: #a5a0a0;
+    margin: 0;
 }
 
 .meio{
-    font-size: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+
+.fiend {
+    margin-top: 28px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid #2c2d2f;
+    border-radius: 8px;
+    background: #131416;
+    padding: 5px;
 }
