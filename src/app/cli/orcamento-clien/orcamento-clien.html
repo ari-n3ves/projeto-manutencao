@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orçamento Cliente</title>
-    <link rel="stylesheet" href="orcamento-clien.css">
-</head>
-
-<body>
-
-    <div class="container">
+<div class="container">
 
         <h1 class="h1">Dados da Solicitação</h1>
 
@@ -18,17 +6,17 @@
 
             <div class="fiend">
                 Descrição Equipamento
-                <p class="valor">-</p>
+                <p class="valor">{{equipamento}}</p>
             </div>
 
             <div class="fiend">
                 Categoria
-                <p class="valor">-</p>
+                <p class="valor">{{categoria}}</p>
             </div>
 
             <div class="fiend">
                 Defeito
-                <p class="valor">-</p>
+                <p class="valor">{{defeito}}</p>
             </div>
 
         </div>
@@ -36,68 +24,50 @@
         <h2 >Orçamento</h2>
 
         <div class="fiend">
-             <div class="orcament"><h3>R$xxxxx </h3> </div>
+             <div class="orcament"><h3>R${{valor}} </h3> </div>
 
         </div>
             
         <div class="botao">
 
-            <div class="wrapper">
-                <a href="#demo-modal2">
-                    <button type="submit" class="rejeitar">Rejeitar</button>
-                </a>
-            </div>
+            <button (click)="rejeitarModal" class="rejeitar">Rejeitar</button>
 
-            <div class="wrapper">
-                <a href="#demo-modal">
-                    <button type="submit" class="aprovar">Aprovar</button>
-                </a>
-            </div>
+            <button (click)="aprovarModal" class="aprovar">Aprovar</button>
+
 
         </div>
 
-        <div id="demo-modal" class="modal">
+       @if (aprovarModal) {
 
             <div class="conteudo">
-
-                <a href="#" class="modal_fechar">&times;</a>
                     Serviço Aprovado no Valor<br>
-                    <div class="orcament"> <h2>R$ xxxxx </h2></div><br>
+                    <div class="orcament"> <h2>R$ {{valor}}</h2></div><br>
                
-                <a [routerLink]="['cliente/inicio']" href="#" ><button class="aprovar">OK</button></a> 
+                <a [routerLink]="['cliente/inicio']" href="#" title="confirmar" alt="confirmar"  class="aprovar">C</a> 
 
             </div>
 
-        </div>
-
-        <div id="demo-modal2" class="modal">
+        }
+        
+        @if(rejeitarModal){
 
             <div class="conteudo">
-
-                <a href="#" class="modal_fechar">&times;</a>
 
                 <h2>Rejeitar Serviço</h2>
 
                 <div class="retangulo">
-
                     <textarea maxlength="100"placeholder="Desescreva o motivo da sua rejeição..."></textarea>
-
                 </div>
 
                 <div class="botao">
-
-                    <a href="#" class="modal_fechar">&times;</a> 
-                    <a href="#" class="cancelar"><button type="submit " class="aprovar">Cancelar</button></a> 
-                    <a [routerLink]="['cliente/inicio']" href="#" class="cancelar"><button type="submit " class="aprovar">Confirmar</button></a>
+                    <a href="#" class="cancelar"><button (click)="fechar()" class="aprovar">Cancelar</button></a> 
+                    <a [routerLink]="['cliente/inicio']" href="#" title="Confirmar" alt="confirmar" class="cancelar"></a>
 
                 </div>
 
             </div>
 
-        </div>
+        
+        }
 
-    </div>
-
-</body>
-
-</html>
+</div>

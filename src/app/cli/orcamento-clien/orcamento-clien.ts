@@ -8,5 +8,15 @@ import { RouterLink, RouterModule } from '@angular/router';
   styleUrl: './orcamento-clien.css',
 })
 export class OrcamentoClien {
-  
+  equipamento ='Notebook Dell';
+  categoria = 'Notebook';
+  defeito = 'Tela Rachada';
+  valor = 'R$200,00';
+
+  aprovarModal = false;
+  rejeitarModal = false;
+
+  fechar(){
+    this.rejeitarModal = false;
+  }
 }

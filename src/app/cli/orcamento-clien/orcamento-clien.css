@@ -31,16 +31,7 @@ body {
     color: white;
 }
 
-.wrapper {
-    display: flex;
-    justify-content: center;
-}
 
-.wrapper a {
-    display: inline-block;
-    text-decoration: none;
-    padding: 20px;
-}
 
 .modal {
     position: fixed;
@@ -52,8 +43,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    visibility: hidden;
-    opacity: 0;
 }
 
 .conteudo {
@@ -67,19 +56,6 @@ body {
     color: white;
 }
 
-.modal:target {
-    visibility: visible;
-    opacity: 1;
-}
-
-.modal_fechar {
-    position: absolute;
-    top: 8px;
-    right: 12px;
-    color: #aaa;
-    font-size: 25px;
-    text-decoration: none;
-}
 
 .retangulo {
     position: relative;
@@ -143,17 +119,6 @@ body {
     margin-top: 22px;
 }
 
-.imagem {
-    width: 70px;
-}
-
-.texto {
-    width: fit-content;
-    font-size: 10.5px;
-    text-transform: uppercase;
-    color: #807a7a;
-    margin: 0;
-}
 
 .valor {
     font-size: 14px;
@@ -163,7 +128,6 @@ body {
 
 .meio{
     display: grid;
-    grid-template-columns: 1fr;
     gap: 12px;
 }
 

@@ -1,98 +1,87 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<div class="container">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagamento Cliente</title>
-    <link rel="stylesheet" href="pagar.component.css">
-</head>
 
-<body>
+    <h1 class="h1">Pagamento</h1>
 
-    <div class="container">
+    <h3>Dados da Solicitação</h3>
 
-        <h1 class="h1">Pagamento</h1>
-        <h3>Dados da Solicitação</h3>
-
-        <div class="meio">
-
-            <div class="fiend">
-                Descrição Equipamento
-                <p class="valor">-</p>
-            </div>
-
-            <div class="fiend">
-                Categoria
-                <p class="valor">-</p>
-            </div>
-
-            <div class="fiend">
-                descrição do defeito
-                <p class="valor">-</p>
-            </div>
-
-        </div>
-
-        <h2 >Pagar</h2>
+    <div class="meio">
 
         <div class="fiend">
-             <div class="pagamento"><h3>R$xxxxx </h3> </div>
-
-        </div>
-            
-        <div class="botao">
-
-            <div class="wrapper">
-                <a href="#demo-modal2">
-                    <button type="submit" class="rejeitar">cancelar</button>
-                </a>
-            </div>
-
-            <div class="wrapper">
-                <a href="#demo-modal">
-                    <button type="submit" class="aprovar">Pagar</button>
-                </a>
-            </div>
-
+            Descrição Equipamento
+            <p class="valor">{{equipamento}}</p>
         </div>
 
-        <div id="demo-modal" class="modal">
+        <div class="fiend">
+            Categoria
+            <p class="valor">{{categoria}}</p>
+        </div>
+
+        <div class="fiend">
+            Descrição do defeito
+            <p class="valor">{{defeito}}</p>
+        </div>
+
+    </div>
+
+    <h2>Pagar</h2>
+
+    <div class="fiend">
+
+        <div class="pagamento">
+            <h3>R$ {{pagamento}}</h3>
+        </div>
+
+    </div>
+
+    <div class="botao">
+
+        <button (click)="cancelarModal"class="rejeitar">Cancelar</button>
+
+        <button (click)="pagarModal" class="aprovar"> Pagar</button>
+
+    </div>
+
+
+    @if (pagarModal){
+
+        <div class="modal">
 
             <div class="conteudo">
 
-                <a href="#" class="modal_fechar">&times;</a>
-                    Pagar em <br>
-                    <div class="pagamento"> <h2>R$ xxxxx </h2></div><br>
-               
-                <a [routerLink]="['cliente/inicio']" href="#" ><button class="aprovar">Pagar</button></a> 
+                Pagar em
+
+                <div class="pagamento">
+                    <h2>R$ {{ pagamento }}</h2>
+                </div>
+
+                <a [routerLink]="['cliente/inicio']"> <button class="aprovar"> Pagar</button></a>
 
             </div>
 
         </div>
 
-        <div id="demo-modal2" class="modal">
+    }
+
+
+    @if (cancelarModal) {
+
+        <div class="modal">
 
             <div class="conteudo">
-
-                <a href="#" class="modal_fechar">&times;</a>
 
                 <h2>Cancelar pagamento</h2>
 
                 <div class="botao">
 
-                    <a href="#" class="modal_fechar">&times;</a> 
-                    <a href="#" class="cancelar"><button type="submit " class="aprovar">Cancelar</button></a> 
-                    <a [routerLink]="['cliente/inicio']" href="#" class="cancelar"><button  class="aprovar">Confirmar</button></a>
+                    <button (close)="cancelarModal = false" class="aprovar">Cancelar</button>
+
+                    <a [routerLink]="['cliente/inicio']"><button class="aprovar"> Confirmar</button></a>
 
                 </div>
 
             </div>
 
         </div>
-
-    </div>
-
-</body>
-
-</html>
+    }
+</div>
