@@ -1,0 +1,144 @@
+<div class="dashboard">
+
+  <aside class="sidebar">
+
+    <h3 class="logo">
+      Fix<span>Up</span>
+    </h3>
+
+    <nav>
+
+      <a
+        class="active"
+        [routerLink]="['/funcionario/inicio']"
+      >
+        Início
+      </a>
+
+      <a
+        [routerLink]="['/funcionario/listar-solicitacoes']"
+      >
+        Solicitações
+      </a>
+
+      <a>
+        Funcionários
+      </a>
+
+      <a
+        [routerLink]="['/funcionario/relatorio']"
+      >
+        Relatórios
+      </a>
+
+      <a>
+        Perfil
+      </a>
+
+    </nav>
+
+  </aside>
+
+
+  <main class="main-content">
+
+    <header class="topbar">
+
+      <span>Sistema de Manutenção</span>
+
+      <span class="user">
+        Funcionário
+      </span>
+
+    </header>
+
+
+    <section class="content">
+
+      <div class="page-header">
+
+        <div>
+          <p>Bem-vindo!</p>
+          <h1>Solicitações abertas</h1>
+        </div>
+
+      </div>
+
+
+      <div class="card">
+
+        <h2>
+          Solicitações que precisam de atenção
+        </h2>
+
+
+        <table class="table">
+
+          <thead>
+
+            <tr>
+              <th>Data/Hora</th>
+              <th>Cliente</th>
+              <th>Equipamento</th>
+              <th>Estado</th>
+              <th>Ação</th>
+            </tr>
+
+          </thead>
+
+
+          <tbody>
+
+            @for (
+              solicitacao of solicitacoes;
+              track solicitacao.data
+            ) {
+
+              <tr>
+
+                <td>
+                  {{ solicitacao.data }}
+                </td>
+
+                <td>
+                  {{ solicitacao.cliente }}
+                </td>
+
+                <td>
+                  {{ solicitacao.equipamento }}
+                </td>
+
+                <td>
+                  <span class="status">
+                    {{ solicitacao.estado }}
+                  </span>
+                </td>
+
+                <td>
+
+                  <button
+                    class="action-button"
+                    [routerLink]="[
+                      '/funcionario/dados-solicitacao'
+                    ]"
+                  >
+                    Efetuar orçamento
+                  </button>
+
+                </td>
+
+              </tr>
+
+            }
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
