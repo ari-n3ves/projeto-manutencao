@@ -33,12 +33,12 @@ export const routes: Routes = [
   {
     path: 'funcionario/relatorio',
     component: Relatorio
-  }
+  },
 
   {
     path: 'orcamento',
     component: OrcamentoClien
-  }
+  },
 
   {
     path: 'pagamento',

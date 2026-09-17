@@ -3,7 +3,7 @@ import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-orcamento-clien',
-  imports: [RouterModule],
+  imports: [RouterModule, RouterLink],
   templateUrl: './orcamento-clien.html',
   styleUrl: './orcamento-clien.css',
 })
@@ -16,7 +16,18 @@ export class OrcamentoClien {
   aprovarModal = false;
   rejeitarModal = false;
 
+  aprovar(){
+    this.aprovarModal = true;
+  }
+
+   rejeitar(){
+    this.rejeitarModal = true;
+  }
+
   fechar(){
+    this.aprovarModal = false;
     this.rejeitarModal = false;
   }
+
+
 }

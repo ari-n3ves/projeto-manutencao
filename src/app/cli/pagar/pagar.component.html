@@ -8,21 +8,18 @@
     <div class="meio">
 
         <div class="fiend">
-            Descrição Equipamento
-            <p class="valor">{{equipamento}}</p>
+            Descrição Equipamento:  <p class="valor">{{equipamento}}</p>
         </div>
 
         <div class="fiend">
-            Categoria
-            <p class="valor">{{categoria}}</p>
+            Categoria: <p class="valor">{{categoria}}</p>
         </div>
 
         <div class="fiend">
-            Descrição do defeito
-            <p class="valor">{{defeito}}</p>
+            Descrição do defeito: <p class="valor">{{defeito}}</p>
         </div>
 
-    </div>
+    </div><br>
 
     <h2>Pagar</h2>
 
@@ -36,9 +33,9 @@
 
     <div class="botao">
 
-        <button (click)="cancelarModal"class="rejeitar">Cancelar</button>
+        <button (click)="cancelar()"class="cancelar">Cancelar</button>
 
-        <button (click)="pagarModal" class="aprovar"> Pagar</button>
+        <button (click)="pagar()" class="aprovar"> Pagar</button>
 
     </div>
 
@@ -49,14 +46,18 @@
 
             <div class="conteudo">
 
-                Pagar em
+                <h3>Fazer pagamento</h3>
 
                 <div class="pagamento">
                     <h2>R$ {{ pagamento }}</h2>
+                </div><br>
+
+                <div class="botao">
+                    <button (click)="fechar()" class="cancelar">Cancelar</button>&nbsp;
+
+                    <button [routerLink]="['/cliente/inicio']" class="aprovar"> Pagar</button>
+
                 </div>
-
-                <a [routerLink]="['cliente/inicio']"> <button class="aprovar"> Pagar</button></a>
-
             </div>
 
         </div>
@@ -70,13 +71,13 @@
 
             <div class="conteudo">
 
-                <h2>Cancelar pagamento</h2>
+                <h4>Deseja fazer o cancelamento do pagamento? </h4>
 
                 <div class="botao">
 
-                    <button (close)="cancelarModal = false" class="aprovar">Cancelar</button>
+                    <button (click)="fechar()" class="cancelar">Cancelar</button>
 
-                    <a [routerLink]="['cliente/inicio']"><button class="aprovar"> Confirmar</button></a>
+                    <button [routerLink]="['/cliente/inicio']"  class="aprovar"> Confirmar</button>
 
                 </div>
 

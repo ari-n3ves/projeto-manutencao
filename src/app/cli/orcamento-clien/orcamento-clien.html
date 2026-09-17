@@ -5,21 +5,18 @@
         <div class="meio">
 
             <div class="fiend">
-                Descrição Equipamento
-                <p class="valor">{{equipamento}}</p>
+                Descrição Equipamento: <p class="valor">{{equipamento}}</p>
             </div>
 
             <div class="fiend">
-                Categoria
-                <p class="valor">{{categoria}}</p>
+                Categoria: <p class="valor">{{categoria}}</p>
             </div>
 
             <div class="fiend">
-                Defeito
-                <p class="valor">{{defeito}}</p>
+                Defeito: <p class="valor">{{defeito}}</p>
             </div>
 
-        </div>
+        </div><br>
 
         <h2 >Orçamento</h2>
 
@@ -30,43 +27,47 @@
             
         <div class="botao">
 
-            <button (click)="rejeitarModal" class="rejeitar">Rejeitar</button>
+            <button (click)="rejeitar()" class="cancelar">Rejeitar</button>
 
-            <button (click)="aprovarModal" class="aprovar">Aprovar</button>
+            <button (click)="aprovar()"  class="aprovar">Aprovar</button>
 
 
         </div>
 
        @if (aprovarModal) {
-
-            <div class="conteudo">
+            <div class="modal">
+                <div class="conteudo">
                     Serviço Aprovado no Valor<br>
                     <div class="orcament"> <h2>R$ {{valor}}</h2></div><br>
-               
-                <a [routerLink]="['cliente/inicio']" href="#" title="confirmar" alt="confirmar"  class="aprovar">C</a> 
-
+                    <div class="botao">
+                        <button (click)="fechar()" class="cancelar">Cancelar</button>
+                    
+                        <button [routerLink]="['/cliente/inicio']"  class="aprovar">Confirmar</button> 
+                    </div>
+                </div>
             </div>
 
         }
         
         @if(rejeitarModal){
+            <div class="modal">
+                <div class="conteudo">
 
-            <div class="conteudo">
+                    <h2>Rejeitar Serviço</h2>
 
-                <h2>Rejeitar Serviço</h2>
+                    <div class="retangulo">
+                        <textarea maxlength="100"placeholder="Desescreva o motivo da sua rejeição..."></textarea>
+                    </div>
 
-                <div class="retangulo">
-                    <textarea maxlength="100"placeholder="Desescreva o motivo da sua rejeição..."></textarea>
+                    <div class="botao">
+                        <button (click)="fechar()" class="cancelar">Cancelar</button> 
+
+                        <button [routerLink]="['/cliente/inicio']"  class="aprovar">Confirmar</button>
+
+                    </div>
+
                 </div>
-
-                <div class="botao">
-                    <a href="#" class="cancelar"><button (click)="fechar()" class="aprovar">Cancelar</button></a> 
-                    <a [routerLink]="['cliente/inicio']" href="#" title="Confirmar" alt="confirmar" class="cancelar"></a>
-
-                </div>
-
             </div>
-
         
         }
 

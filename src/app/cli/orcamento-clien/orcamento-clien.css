@@ -1,6 +1,8 @@
-
-* {
-    box-sizing: border-box;
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #111;
+  color: #fff;
 }
 
 .orcament {
@@ -11,18 +13,11 @@
 
 .h1 {
     font-size: 30px;
-    display: inline-block;
 }
 
-body {
-    margin: 0;
-    min-height: 100vh;
-    background: #111;
-    font-family: Arial;
-}
 
 .container {
-    width: 100%;
+    width: 40%;
     max-width: 720px;
     margin: 40px auto;
     padding: 38px 42px 34px;
@@ -77,8 +72,7 @@ body {
 }
 
 
-.aprovar,
-.rejeitar {
+.aprovar {
     width: 100px;
     height: 43px;
     border: 2px solid #ff5500;
@@ -91,28 +85,29 @@ body {
     cursor: pointer;
 }
 
-.aprovar:hover,
-.rejeitar:hover {
-    background: #e64d00;
+.aprovar:hover {
+    background: #ff5500;
 }
 
 .cancelar {
     border-radius: 8px;
     background: transparent;
-    color: white;
+    color: #ff5500;
     font-size: 14px;
     font-weight: 700;
     padding: 10px 20px;
     height: 43px;
     cursor: pointer;
-    border: 1px solid #555;
+    border: 1px solid #ff5500;
 }
 
 .cancelar:hover {
     background: #292929;
 }
 
+
 .botao {
+    text-align: center;
     display: flex;
     justify-content: center;
     gap: 30px;

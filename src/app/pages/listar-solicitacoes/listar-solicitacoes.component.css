@@ -5,6 +5,10 @@
     color: #fff;
 }
 
+body {
+    background: red !important;
+}
+
 .dashboard {
     display: flex;
     min-height: 100vh;
