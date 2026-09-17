@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-listar-solicitacoes',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './listar-solicitacoes.component.html',
   styleUrl: './listar-solicitacoes.component.css',
 })

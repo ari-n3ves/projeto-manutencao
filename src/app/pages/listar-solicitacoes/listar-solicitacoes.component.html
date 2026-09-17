@@ -1,55 +1,77 @@
 <div class="dashboard">
-    <aside class="sidebar">
-      <h3 class="logo">Fix<span>Up</span></h3>
+<aside class="sidebar">
 
-      <nav>
-      <a>Início</a>
-      <a class="active">Solicitações</a>
-      <a>Perfil</a>
-      </nav>
-    </aside>
+  <h3 class="logo">
+    Fix<span>Up</span>
+  </h3>
+
+  <nav>
+
+    <a
+      [routerLink]="['/funcionario/inicio']"
+    >
+      Início
+    </a>
+
+    <a
+      class="active"
+      [routerLink]="['/funcionario/listar-solicitacoes']"
+    >
+      Solicitações
+    </a>
+
+    <a>
+      Funcionários
+    </a>
+
+    <a
+      [routerLink]="['/funcionario/relatorio']"
+    >
+      Relatórios
+    </a>
+
+    <a>
+      Perfil
+    </a>
+
+  </nav>
+
+</aside>
 
     <main class="main-content">
         <header class="topbar">
-          <span>Sistema de Manutenção</span>
-          <span class="user">Funcionário</span>
+            <span>Sistema de Manutenção</span>
+            <span class="user">Funcionário</span>
         </header>
 
-        <section class="content">
-          <div class="page-header">
-            <h1>Solicitações</h1>
-          </div>
+      <div class="card">
+        <form class="row">
+            <input class="col" type="text" placeholder="Pesquisar">
+            <input class="col" type="button" value="Filtrar">
+        </form>
 
-          <div class="card">
-            <form class="row">
-                <input class="col-5" type="text" placeholder="Pesquisar">
-                <input class="col-auto filter-button" type="button" value="Filtrar">
-            </form>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Data/Hora</th>
+              <th>Equipamento</th>
+              <th>Estado</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
 
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>Data/Hora</th>
-                  <th>Equipamento</th>
-                  <th>Estado</th>
-                  <th>Ação</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                @for (solicitacao of solicitacoes; track solicitacao.data) {
-                  <tr>
-                    <td>{{ solicitacao.data }}</td>
-                    <td>{{ solicitacao.equipamento }}</td>
-                    <td><span class="status">{{ solicitacao.estado }}</span></td>
-                    <td><button class="action-button">Visualizar</button></td>
-                  </tr>
-                }
-              </tbody>
-            </table>
-          </div>
-        </section>
+          <tbody>
+            @for (solicitacao of solicitacoes; track solicitacao.data) {
+              <tr>
+                <td>{{ solicitacao.data }}</td>
+                <td>{{ solicitacao.equipamento }}</td>
+                <td><span class="status">{{ solicitacao.estado }}</span></td>
+                <td><button class="action-button">Visualizar</button></td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
 
     </main>
 </div>
-

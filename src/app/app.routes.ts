@@ -5,6 +5,7 @@ import { NovaSolicitacaoComponent } from './pages/Cliente/nova-solicitacao';
 import { DadosSolicitacao } from './pages/dados-solicitacao';
 import { ListarSolicitacoesComponent } from './pages/listar-solicitacoes';
 import { Relatorio } from './pages/tela-relatorio/relatorio';
+import { CadastroComponent } from './pages/Cliente/cadastro';
 import { Component } from '@angular/core';
 
 export const routes: Routes = [
@@ -31,5 +32,9 @@ export const routes: Routes = [
   {
     path: 'funcionario/relatorio',
     component: Relatorio
+  },
+  {
+    path: 'cadastro',
+    component: CadastroComponent
   }
 ];
