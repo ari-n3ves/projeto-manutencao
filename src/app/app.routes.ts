@@ -13,6 +13,10 @@ import { InicioFuncionarioComponent } from './pages/inicio-funcionario/inicio-fu
 
 export const routes: Routes = [
   {
+    path: '',
+    component: Login
+  },
+  {
     path: 'cliente/inicio',
     component: Inicio
   },
@@ -41,11 +45,11 @@ export const routes: Routes = [
     component: CadastroComponent
   },
   {
-    path: 'orcamento',
+    path: 'cliente/orcamento',
     component: OrcamentoClien
   },
   {
-    path: 'pagamento',
+    path: 'cliente/pagamento',
     component: PagarComponent
   },
   {
