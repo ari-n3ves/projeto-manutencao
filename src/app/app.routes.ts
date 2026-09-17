@@ -38,13 +38,11 @@ export const routes: Routes = [
   {
     path: 'cadastro',
     component: CadastroComponent
-  }
-
+  },
   {
     path: 'orcamento',
     component: OrcamentoClien
-  }
-
+  },
   {
     path: 'pagamento',
     component: PagarComponent
