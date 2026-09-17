@@ -1,0 +1,36 @@
+<div class="nova-solicitacao-page">
+    <div class="container-formulario">
+        <h2 class="titulo-secao">Nova Solicitação</h2>
+        <form class="form-group">
+            <div class="row campo">
+                <label for="Equipamento">Equipamento:</label>
+                <input type="text" id="equipamento" placeholder="Descreva o equipamento">
+            </div>
+
+            <div class="row campo">
+                <label for="Defeito">Categoria:</label>
+                <select id="categoria" class="combobox-categoria">
+                    <option value="">Selecione</option>
+                    <option value="Notebook">Notebook</option>
+                    <option value="Desktop">Desktop</option>
+                    <option value="Impressora">Impressora</option>
+                    <option value="Mouse">Mouse</option>
+                    <option value="Teclado">Teclado</option>
+                </select>
+                
+            </div>
+
+            <div class="row campo">
+                <label for="Defeito">Defeito:</label>
+                <input id="defeito" type="text" placeholder="Descreva o defeito">
+            </div>
+
+            <div class="row">
+                <a class="col-4 cancelar" [routerLink]="['/cliente/inicio']">Cancelar</a>
+                <button type="button" class="col enviar-btn" [routerLink]="['/cliente/inicio']">Enviar</button>    
+            </div>
+
+        </form>
+    </div>
+
+</div>

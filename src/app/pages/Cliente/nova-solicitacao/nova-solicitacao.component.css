@@ -1,0 +1,102 @@
+:host{
+    display: block;
+    min-height: 100vh;
+}
+
+.nova-solicitacao-page{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0D0D0D;
+    color: #FFFFFF;
+    padding: 30px;
+}
+
+.container-formulario{
+    width: 600px;
+    padding: 45px;
+    background: #1A1A1A;
+    border: 1px solid #2A2A2A;
+    border-radius: 16px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+}
+
+.titulo-secao{
+    text-align: left;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form > label {
+  color: #FFFFFF;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+input[type="text"] {
+  background: #0D0D0D;
+  color: #FFFFFF;
+  border: 1px solid #2A2A2A;
+  border-radius: 8px;
+  padding: 13px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.combobox-categoria{
+  background: #0D0D0D;
+  color: #FFFFFF;
+  border: 1px solid #2A2A2A;
+  border-radius: 8px;
+  padding: 13px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #FF5500;
+  box-shadow: 0 0 0 2px rgba(255, 85, 0, 0.15);
+}
+
+input::placeholder {
+  color: #A0A0A0;
+}
+
+.enviar-btn, .cancelar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    color: #FFFFFF;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.enviar-btn{
+    background: #FF5500;
+}
+
+.enviar-btn:hover {
+    background: #E8490A;
+    transform: translateY(-1px);
+}
+
+.cancelar{
+    text-decoration: underline;
+    color: #FF5500;
+}
+
+.cancelar:hover{
+    transform: translateY(-1px);
+}

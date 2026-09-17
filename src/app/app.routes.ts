@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { Inicio } from './cliente/inicio/inicio';
 import { Login } from './login/login';
+import { NovaSolicitacaoComponent } from './pages/Cliente/nova-solicitacao';
 import { DadosSolicitacao } from './pages/dados-solicitacao';
 import { ListarSolicitacoesComponent } from './pages/listar-solicitacoes';
 import { Relatorio } from './pages/tela-relatorio/relatorio';
@@ -14,6 +15,10 @@ export const routes: Routes = [
   {
     path: 'login',
     component: Login
+  },
+  {
+    path: 'cliente/nova-solicitacao',
+    component: NovaSolicitacaoComponent
   },
   {
     path: 'funcionario/dados-solicitacao',
