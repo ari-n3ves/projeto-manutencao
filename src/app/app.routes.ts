@@ -7,6 +7,8 @@ import { ListarSolicitacoesComponent } from './pages/listar-solicitacoes';
 import { Relatorio } from './pages/tela-relatorio/relatorio';
 import { CadastroComponent } from './pages/Cliente/cadastro';
 import { Component } from '@angular/core';
+import { OrcamentoClien } from './cli/orcamento-clien/orcamento-clien';
+import { PagarComponent } from './cli/pagar/pagar.component';
 
 export const routes: Routes = [
   {
@@ -36,5 +38,15 @@ export const routes: Routes = [
   {
     path: 'cadastro',
     component: CadastroComponent
+  }
+
+  {
+    path: 'orcamento',
+    component: OrcamentoClien
+  }
+
+  {
+    path: 'pagamento',
+    component: PagarComponent
   }
 ];

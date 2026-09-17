@@ -1,34 +1,87 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scaleial-scale1.0">
-        <title>Pagamento Cliente</title>
-        <link rel="stylesheet" href="pagar.component.css">
-    </head>
+<div class="container">
 
-<body>
-    
-    <div class="descrição">
-    <h1><b>Pagar</b></h1>
 
-        <div class="meio">
-            <p>Data:DD/MM/YYYY e Hora: 00:00</p>
+    <h1 class="h1">Pagamento</h1>
 
-            <p>Descrição Equipamento: </p>
-            <p>Categoria:</p>
-            <p>Defeito:</p>
+    <h3>Dados da Solicitação</h3>
+
+    <div class="meio">
+
+        <div class="fiend">
+            Descrição Equipamento
+            <p class="valor">{{equipamento}}</p>
         </div>
+
+        <div class="fiend">
+            Categoria
+            <p class="valor">{{categoria}}</p>
+        </div>
+
+        <div class="fiend">
+            Descrição do defeito
+            <p class="valor">{{defeito}}</p>
+        </div>
+
     </div>
 
-    <div class="pagamento">
-        Orçamento: R$xxxxx<br>
+    <h2>Pagar</h2>
+
+    <div class="fiend">
+
+        <div class="pagamento">
+            <h3>R$ {{pagamento}}</h3>
+        </div>
+
     </div>
 
-    <br><br><button>Confirmar Pagamento</button>
+    <div class="botao">
 
-    <!-- pagamento confirmado span-->
+        <button (click)="cancelarModal"class="rejeitar">Cancelar</button>
 
-   
-</body>
-</html>
+        <button (click)="pagarModal" class="aprovar"> Pagar</button>
+
+    </div>
+
+
+    @if (pagarModal){
+
+        <div class="modal">
+
+            <div class="conteudo">
+
+                Pagar em
+
+                <div class="pagamento">
+                    <h2>R$ {{ pagamento }}</h2>
+                </div>
+
+                <a [routerLink]="['cliente/inicio']"> <button class="aprovar"> Pagar</button></a>
+
+            </div>
+
+        </div>
+
+    }
+
+
+    @if (cancelarModal) {
+
+        <div class="modal">
+
+            <div class="conteudo">
+
+                <h2>Cancelar pagamento</h2>
+
+                <div class="botao">
+
+                    <button (close)="cancelarModal = false" class="aprovar">Cancelar</button>
+
+                    <a [routerLink]="['cliente/inicio']"><button class="aprovar"> Confirmar</button></a>
+
+                </div>
+
+            </div>
+
+        </div>
+    }
+</div>
