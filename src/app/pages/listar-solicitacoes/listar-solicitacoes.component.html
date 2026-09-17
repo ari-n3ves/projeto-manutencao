@@ -3,10 +3,35 @@
       <h3 class="logo">Fix<span>Up</span></h3>
 
       <nav>
-      <a>Início</a>
-      <a class="active">Solicitações</a>
-      <a>Perfil</a>
-      </nav>
+
+          <a
+            [routerLink]="['/funcionario/inicio']"
+          >
+            Início
+          </a>
+
+          <a
+            class="active"
+            [routerLink]="['/funcionario/listar-solicitacoes']"
+          >
+            Solicitações
+          </a>
+
+          <a>
+            Funcionários
+          </a>
+
+          <a
+            [routerLink]="['/funcionario/relatorio']"
+          >
+            Relatórios
+          </a>
+
+          <a>
+            Perfil
+          </a>
+
+        </nav>
     </aside>
 
     <main class="main-content">
@@ -52,4 +77,3 @@
 
     </main>
 </div>
-

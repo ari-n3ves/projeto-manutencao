@@ -6,50 +6,146 @@
 
 .login-page {
   min-height: 100vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #0D0D0D;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #181818 0%,
+      #0d0d0d 55%,
+      #080808 100%
+    );
+
   padding: 30px;
 }
 
 .login-card {
-  width: 420px;
+  width: 100%;
+  max-width: 480px;
+
   padding: 45px;
-  background: #1A1A1A;
-  border: 1px solid #2A2A2A;
-  border-radius: 16px;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+
+  background: #181818;
+
+  border: 1px solid #292929;
+  border-radius: 18px;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.55);
 }
 
 .logo {
   text-align: center;
+
   font-size: 32px;
   font-weight: 700;
-  color: #FFFFFF;
-  margin-bottom: 35px;
+
+  color: white;
+
+  margin-bottom: 32px;
 }
 
 .logo span {
-  color: #FF5500;
+  color: #ff5500;
+}
+
+
+/* CABEÇALHO */
+
+.login-header {
+  margin-bottom: 25px;
 }
 
 .welcome {
-  color: #FF5500;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1px;
+  color: #ff5500;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1.4px;
+
+  margin: 0;
 }
 
 h1 {
-  color: #FFFFFF;
-  font-size: 28px;
-  margin: 8px 0;
+  color: white;
+
+  font-size: 29px;
+
+  margin: 7px 0;
 }
 
 .subtitle {
-  color: #A0A0A0;
-  margin-bottom: 30px;
+  color: #8f8f8f;
+
+  font-size: 14px;
+
+  margin: 0;
+}
+
+.profile-selector {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+
+  margin-bottom: 28px;
+}
+
+.profile-option {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 14px;
+
+  text-align: left;
+
+  background: #101010;
+
+  border: 1px solid #303030;
+  border-radius: 10px;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.profile-option:hover {
+  border-color: #555;
+}
+
+.profile-option.active {
+  background: rgba(255, 85, 0, 0.08);
+
+  border-color: #ff5500;
+
+  box-shadow:
+    0 0 0 1px rgba(255, 85, 0, 0.1);
+}
+
+.profile-option div {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-option strong {
+  font-size: 14px;
+}
+
+.profile-option small {
+  color: #898989;
+
+  font-size: 11px;
+
+  margin-top: 3px;
 }
 
 form {
@@ -58,68 +154,130 @@ form {
 }
 
 form > label {
-  color: #FFFFFF;
-  font-size: 14px;
-  margin-bottom: 8px;
+  color: white;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  margin-bottom: 7px;
 }
 
 input[type="email"],
 input[type="password"] {
-  background: #0D0D0D;
-  color: #FFFFFF;
-  border: 1px solid #2A2A2A;
+  background: #0d0d0d;
+
+  color: white;
+
+  border: 1px solid #292929;
   border-radius: 8px;
-  padding: 13px;
-  margin-bottom: 20px;
+
+  padding: 14px;
+
+  margin-bottom: 18px;
+
   outline: none;
+
+  transition: 0.2s;
 }
 
-input:focus {
-  border-color: #FF5500;
-  box-shadow: 0 0 0 2px rgba(255, 85, 0, 0.15);
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #ff5500;
+
+  box-shadow:
+    0 0 0 3px rgba(255, 85, 0, 0.1);
 }
 
 input::placeholder {
-  color: #A0A0A0;
+  color: #676767;
 }
 
 .options {
   display: flex;
+
   justify-content: space-between;
   align-items: center;
+
   margin-bottom: 25px;
-  font-size: 13px;
+
+  font-size: 12px;
 }
 
 .remember {
-  color: #A0A0A0;
+  color: #898989;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
 }
 
 .options a,
 .register a {
-  color: #FF5500;
+  color: #ff5500;
+
   cursor: pointer;
+
+  text-decoration: none;
 }
 
-button {
+.options a:hover,
+.register a:hover {
+  text-decoration: underline;
+}
+
+
+/* BOTÃO ENTRAR */
+
+.login-button {
   border: none;
+
   border-radius: 8px;
+
   padding: 14px;
-  background: #FF5500;
-  color: #FFFFFF;
+
+  background: #ff5500;
+
+  color: white;
+
   font-weight: 700;
+
   cursor: pointer;
+
   transition: 0.2s;
 }
 
-button:hover {
-  background: #E8490A;
+.login-button:hover {
+  background: #e8490a;
+
   transform: translateY(-1px);
+
+  box-shadow:
+    0 7px 20px rgba(255, 85, 0, 0.15);
 }
 
 .register {
-  color: #A0A0A0;
+  color: #898989;
+
   text-align: center;
+
   margin-top: 25px;
-  font-size: 14px;
+
+  font-size: 13px;
+}
+
+@media (max-width: 550px) {
+
+  .login-page {
+    padding: 20px;
+  }
+
+  .login-card {
+    padding: 30px 25px;
+  }
+
+  .profile-selector {
+    grid-template-columns: 1fr;
+  }
+
 }

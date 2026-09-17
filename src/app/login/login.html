@@ -1,40 +1,90 @@
 <div class="login-page">
+
   <div class="login-card">
 
     <div class="logo">
       <span>Fix</span>Up
     </div>
 
-    <p class="welcome">BEM-VINDO DE VOLTA</p>
-    <h1>Entre na sua conta</h1>
-    <p class="subtitle">Acesse o sistema de manutenção</p>
+    <div class="login-header">
+      <p class="welcome">BEM-VINDO</p>
+      <h1>Login</h1>
+    </div>
 
-    <form>
+    <div class="profile-selector">
+
+  <button
+    type="button"
+    class="profile-option"
+    [class.active]="perfil === 'cliente'"
+    (click)="selecionarPerfil('cliente')"
+  >
+    <div>
+      <strong>Cliente</strong>
+      <small>Acompanhe suas solicitações</small>
+    </div>
+  </button>
+
+  <button
+    type="button"
+    class="profile-option"
+    [class.active]="perfil === 'funcionario'"
+    (click)="selecionarPerfil('funcionario')"
+  >
+    <div>
+      <strong>Funcionário</strong>
+      <small>Gerencie as manutenções</small>
+    </div>
+  </button>
+
+</div>
+
+    <form (ngSubmit)="entrar()">
+
       <label for="email">E-mail</label>
+
       <input
         id="email"
+        name="email"
         type="email"
+        [(ngModel)]="email"
         placeholder="Digite seu e-mail"
+        required
       >
 
       <label for="password">Senha</label>
-      <input id="password" type="password" placeholder="Digite sua senha">
+
+      <input
+        id="password"
+        name="senha"
+        type="password"
+        [(ngModel)]="senha"
+        placeholder="Digite sua senha"
+        required
+      >
 
       <div class="options">
+
         <label class="remember">
           <input type="checkbox">
           Lembrar de mim
         </label>
+
         <a>Esqueci minha senha</a>
+
       </div>
 
-      <button type="button" (click)="entrar()">ENTRAR</button>
+      <button class="login-button" type="submit">
+        ENTRAR
+      </button>
+
     </form>
 
-    <p class="register">
+    <p class="register" ngIf="perfil === 'cliente'">
       Ainda não possui uma conta?
-      <a>Cadastre-se</a>
+      <a routerLink="/cadastro">Cadastre-se</a>
     </p>
 
   </div>
+
 </div>

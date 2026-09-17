@@ -5,11 +5,17 @@ import { NovaSolicitacaoComponent } from './pages/Cliente/nova-solicitacao';
 import { DadosSolicitacao } from './pages/dados-solicitacao';
 import { ListarSolicitacoesComponent } from './pages/listar-solicitacoes';
 import { Relatorio } from './pages/tela-relatorio/relatorio';
+import { CadastroComponent } from './pages/Cliente/cadastro';
 import { Component } from '@angular/core';
 import { OrcamentoClien } from './cli/orcamento-clien/orcamento-clien';
 import { PagarComponent } from './cli/pagar/pagar.component';
+import { InicioFuncionarioComponent } from './pages/inicio-funcionario/inicio-funcionario.component';
 
 export const routes: Routes = [
+  {
+    path: '',
+    component: Login
+  },
   {
     path: 'cliente/inicio',
     component: Inicio
@@ -34,14 +40,28 @@ export const routes: Routes = [
     path: 'funcionario/relatorio',
     component: Relatorio
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> 28648947a149abf7283dbd0be0aa2e6563e9e1a2
   {
-    path: 'orcamento',
+    path: 'cadastro',
+    component: CadastroComponent
+  },
+  {
+    path: 'cliente/orcamento',
     component: OrcamentoClien
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> 28648947a149abf7283dbd0be0aa2e6563e9e1a2
   {
-    path: 'pagamento',
+    path: 'cliente/pagamento',
     component: PagarComponent
+  },
+  {
+    path: 'funcionario/inicio',
+    component: InicioFuncionarioComponent
   }
 ];
