@@ -13,7 +13,7 @@
     <div class="container">
 
         <h1 class="h1">Pagamento</h1>
-        <h3>Dados da solicitação</h3>
+        <h3>Dados da Solicitação</h3>
 
         <div class="meio">
 
@@ -28,16 +28,16 @@
             </div>
 
             <div class="fiend">
-                Defeito
+                descrição do defeito
                 <p class="valor">-</p>
             </div>
 
         </div>
 
-        <h2 >valor de</h2>
+        <h2 >Pagar</h2>
 
         <div class="fiend">
-             <div class="pagamento"><h3>R$xxxxx </h3> </div>
+             <div class="orcament"><h3>R$xxxxx </h3> </div>
 
         </div>
             
@@ -51,7 +51,7 @@
 
             <div class="wrapper">
                 <a href="#demo-modal">
-                    <button type="submit" class="aprovar">pagar</button>
+                    <button type="submit" class="aprovar">Pagar</button>
                 </a>
             </div>
 
@@ -62,8 +62,8 @@
             <div class="conteudo">
 
                 <a href="#" class="modal_fechar">&times;</a>
-                    Pagamento feito no valor<br>
-                    <div class="pagamento"> <h2>R$ xxxxx </h2></div><br>
+                    Pagar em <br>
+                    <div class="orcament"> <h2>R$ xxxxx </h2></div><br>
                
                 <a [routerLink]="['cliente/inicio']" href="#" ><button class="aprovar">Pagar</button></a> 
 
@@ -77,12 +77,13 @@
 
                 <a href="#" class="modal_fechar">&times;</a>
 
-                <h2>Pagamento cancelado</h2>
+                <h2>Cancelar pagamento</h2>
 
                 <div class="botao">
 
                     <a href="#" class="modal_fechar">&times;</a> 
-                    <a [routerLink]="['cliente/inicio']" href="#" class="cancelar"><button type="submit " class="aprovar">Confirmar cancelamento</button></a> 
+                    <a href="#" class="cancelar"><button type="submit " class="aprovar">Cancelar</button></a> 
+                    <a [routerLink]="['cliente/inicio']" href="#" class="cancelar"><button  class="aprovar">Confirmar</button></a>
 
                 </div>
 
